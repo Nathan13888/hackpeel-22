@@ -20,8 +20,6 @@ export default function Footer() {
 
         <p className="text-gray-300 text-sm">|</p>
 
-        <p className="text-gray-300 text-sm">|</p>
-
         <Link href="/contacts">
           <a className="text-blue-500 hover:text-blue-700 duration-200">
             Contact Us

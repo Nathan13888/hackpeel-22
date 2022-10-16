@@ -14,6 +14,30 @@ const links = [
         priority: false
     },
     {
+        name: "About Us",
+        link: "/about-us",
+        id: "about-us",
+        priority: false
+    },
+    {
+        name: "Timetable",
+        link: "/timetable",
+        id: "timetable",
+        priority: false
+    },
+    {
+        name: "FAQ",
+        link: "/faq",
+        id: "faq",
+        priority: false
+    },
+    {
+        name: "Sponsors",
+        link: "/sponsors",
+        id: "sponsors",
+        priority: false
+    },
+    {
         name: "Sign Up",
         link: "/sign-up",
         id: "call-to-action",

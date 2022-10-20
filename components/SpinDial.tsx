@@ -21,10 +21,10 @@ export default function SpinDial({num, digits, descriptor}: {num: int, digits: i
     let strnum = String(num);
     const display: string = strnum.padStart(digits, "0");
 
-    return (<div className="mx-2">
+    return (<div className="mx-2 flex flex-row">
         {
             strmap(display, digit => (
-                <div className="float-left h-20 w-16 bg-slate-200 place-content-center text-center overflow-hidden">
+                <div className="float-left h-20 w-16 bg-gradient-to-b from-slate-200 via-transparent to-slate-200 place-content-center text-center overflow-hidden">
                     <RollingNumber num={Number(digit)} />
                 </div>
             ))

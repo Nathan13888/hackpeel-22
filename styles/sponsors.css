@@ -1,0 +1,3 @@
+.sponsor:hover {
+	filter: brightness(120%) drop-shadow(var(--sponsor-col) 0 0 3px);
+}

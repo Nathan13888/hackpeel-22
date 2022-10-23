@@ -1,14 +1,16 @@
 import { useState } from "react";
+import SocialObject from "./SocialsDisplay";
 
 
+export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string, ln: string, title: string, hl: boolean, socials: object}) {
 
-export default function TeamDisplay({fn, ln, title, img, hl}: {fn: string, ln: string, title: string, hl: boolean}) {
 	const firstn = fn ? fn.toUpperCase() : "UNDEFINED";
 	const lastn = ln ? ln.toUpperCase() : "UNDEFINED";
-	var cns = "h-auto m-5 p-5 overflow-hidden text-left rounded-md";
+	var cns = "p-5 overflow-hidden text-left rounded-md team-card transition-all";
 	var fns = "mx-2 my-0 py-0 font-bold text-xl";
-	var lns = "mx-2 my-0 py-0 font-bold";
-	var ts = "ml-2 w-44 whitespace-normal"
+	var lns = "mx-2 mb-0 py-0 font-bold";
+	var ts = "ml-2 w-44 whitespace-normal h-20 transition-all overflow-hidden"
+	if (scls) ts += " desc"
 	if (hl) {
 		cns += " bg-[#283678]";
 		fns += " text-white";
@@ -19,12 +21,16 @@ export default function TeamDisplay({fn, ln, title, img, hl}: {fn: string, ln: s
 		fns += " text-sky-800"
 		lns += " text-slate-400"
 	}
+	console.log(scls)
 	return (<>
 		<div className={cns}>
-			<img className="w-48 h-48 rounded-md mb-2" src={img ? img : ""}/>
+			<img className="w-48 h-48 rounded-md mb-2" src={img}/>
 			<div className={fns} >{firstn}</div>
 			<div className={lns}>{lastn}</div>
 			<div className={ts} >{title}</div>
+			{
+				scls ? <SocialObject socials={scls}/> : (<></>)
+			}
 		</div>
 	</>)
 }

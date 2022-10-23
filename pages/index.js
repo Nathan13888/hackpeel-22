@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Layout from "../components/Layout"
 import DateCounter from "../components/DateCounter"
 import TeamSection from "../components/TeamSection"
+import SponsorsSection from "../components/SponsorsSection"
 
 export default function Home() {
   return (

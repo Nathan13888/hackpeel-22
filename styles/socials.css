@@ -1,0 +1,13 @@
+.team-card:hover > .social {
+	height: 5rem;
+}
+
+.team-card:hover > .desc {
+	height: 0px;
+}
+
+.team-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.4);
+	filter: brightness(110%);
+}

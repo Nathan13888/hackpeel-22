@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useInterval from "../utilities/chooks.js";
+import useInterval from "../util/chooks.js";
 import SpinDial from "./SpinDial"
 // import Logo from "../public/images/logo.png";
 

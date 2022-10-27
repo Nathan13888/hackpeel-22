@@ -56,7 +56,7 @@ export default function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
 
     return (
-        <header className="bg-gray-100 py-2 lg:py-4 sticky">
+        <header className="bg-slate-900 py-2 lg:py-4 sticky">
             <div className="container px-4 mx-auto lg:flex lg:items-center">
                 <div className="flex justify-between items-center">
                     <Link href="/">
@@ -83,7 +83,7 @@ export default function Header() {
                         links.map(({ name, link, priority, id }) =>
                             <Link key={name} href={link} scroll={!(link.includes("#"))}>
                                 <a 
-                                    className={`${priority ? "text-blue-600 hover:bg-blue-600 hover:text-white text-center border border-solid border-blue-600 mt-1 lg:mt-0 lg:ml-1" : "text-gray-600 hover:bg-gray-200 hover:text-gray-700 "} p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors `}
+                                    className={`${priority ? "text-blue-600 hover:bg-blue-600 hover:text-white text-center border border-solid border-blue-600 mt-1 lg:mt-0 lg:ml-1" : "text-gray-300 hover:bg-gray-200 hover:text-gray-700"} p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors `}
                                     data-test-id={`navbar-${id}`}
                                 >
                                     {name}

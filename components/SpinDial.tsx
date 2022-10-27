@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useInterval from "../utilities/chooks.js";
+import useInterval from "../util/chooks.js";
 // import Logo from "../public/images/logo.png";
 
 const digits: Array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];

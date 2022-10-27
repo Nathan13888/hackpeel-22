@@ -2,39 +2,46 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-// import Logo from "../public/images/logo.png";
+import Logo from "../public/images/logo.png";
 
 import { GoThreeBars } from "react-icons/go"
 
+// TODO: Make sure this fits on all screens
 const links = [
     {
         name: "Home",
-        link: "/",
+        link: "/#home",
         id: "home",
         priority: false
     },
     {
         name: "About Us",
-        link: "/about-us",
+        link: "/#about-us",
         id: "about-us",
         priority: false
     },
     {
         name: "Timetable",
-        link: "/timetable",
+        link: "/#timetable",
         id: "timetable",
         priority: false
     },
     {
         name: "FAQ",
-        link: "/faq",
+        link: "/#faq",
         id: "faq",
         priority: false
     },
     {
         name: "Sponsors",
-        link: "/sponsors",
+        link: "/#sponsors",
         id: "sponsors",
+        priority: false
+    },
+    {
+        name: "Team",
+        link: "/#team",
+        id: "team",
         priority: false
     },
     {
@@ -54,8 +61,7 @@ export default function Header() {
                 <div className="flex justify-between items-center">
                     <Link href="/">
                         <a className="font-bold text-xl text-teal">
-                            {/* <Image src={Logo} alt="logo" width={50} height={50} /> */}
-                            hack::peel
+                            <Image src={Logo} alt="logo" width={200} height={50} />
                         </a>
                     </Link>
 
@@ -75,7 +81,7 @@ export default function Header() {
                 <div className={`${showDropdown ? "flex" : "hidden"} lg:flex flex-col lg:flex-row lg:ml-auto mt-3 lg:mt-0`} data-test-id="navbar">
                     {
                         links.map(({ name, link, priority, id }) =>
-                            <Link key={name} href={link}>
+                            <Link key={name} href={link} scroll={!(link.includes("#"))}>
                                 <a 
                                     className={`${priority ? "text-blue-600 hover:bg-blue-600 hover:text-white text-center border border-solid border-blue-600 mt-1 lg:mt-0 lg:ml-1" : "text-gray-600 hover:bg-gray-200 hover:text-gray-700 "} p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors `}
                                     data-test-id={`navbar-${id}`}

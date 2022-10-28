@@ -21,7 +21,7 @@ export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string,
 		fns += " text-sky-800"
 		lns += " text-slate-400"
 	}
-	console.log(scls)
+
 	return (<>
 		<div className={cns}>
 			<img className="w-48 h-48 rounded-md mb-2" src={img}/>

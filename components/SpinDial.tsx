@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import useInterval from "../util/chooks.js";
 // import Logo from "../public/images/logo.png";
 
-const digits: Array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const digits: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 function strmap(str, cb) {
   return Array.prototype.map.call(str, cb);
 }
-function RollingNumber({ num }: { num: int }) {
+function RollingNumber({ num }: { num: number }) {
   return (
     <>
       <div
@@ -29,8 +29,8 @@ export default function SpinDial({
   digits,
   descriptor,
 }: {
-  num: int;
-  digits: int;
+  num: number;
+  digits: number;
   descriptor: string;
 }) {
   let strnum = String(num);

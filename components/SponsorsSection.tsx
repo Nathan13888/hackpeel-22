@@ -23,7 +23,7 @@ export default function SponsorsSection() {
 		<section id="sponsor" className="text-center m-0 w-auto">
 			<h1 className="text-4xl font-bold m-5 w-auto">Sponsors</h1>
 			<div className={flexcls}>
-				{sponsors.map(spnsr => (<Sponsor name={spnsr.name} img={spnsr.img ? spnsr.img.src : null} col={spnsr.col} href={spnsr.href} />))}
+				{sponsors.map(spnsr => (<Sponsor name={spnsr.name} img={spnsr.img ? spnsr.img.src : null} col={spnsr.col} href={spnsr.href} key={spnsr.name} />))}
 			</div>
 			<a className="m-auto l-0 r-0">
 				<button className="">Become a Sponsor</button>

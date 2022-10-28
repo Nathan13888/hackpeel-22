@@ -111,8 +111,8 @@ const staff = [
 	}
 ]
 
-function SectionDisp({arr}: {arr: Array}) {
-	return arr.map(member => <TeamDisplay fn={member.first} ln={member.last} img={member.img ? member.img.src : null} title={member.title} hl={member.highlight} scls={member.socials}/>);
+function SectionDisp({arr}: {arr: any[]}) {
+	return <>{arr.map(member => <TeamDisplay fn={member.first} ln={member.last} img={member.img ? member.img.src : null} title={member.title} hl={member.highlight} scls={member.socials} key={member.first} />)}</>;
 }
 
 export default function TeamSection() {

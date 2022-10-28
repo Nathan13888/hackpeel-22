@@ -16,7 +16,7 @@ function SocialObject({img, col, href}: {img: string, col: string, href: string}
 		</a>
 	)
 }
-export default function SocialsDisplay({socials}: {socials: Array}) {
+export default function SocialsDisplay({socials}: {socials: any[]}) {
 	return (<>
 		<div className="flex h-0 mx-2 my-0 social transition-all overflow-hidden">
 			{

@@ -2,7 +2,7 @@ import { useState } from "react";
 import SocialObject from "./SocialsDisplay";
 
 
-export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string, ln: string, title: string, hl: boolean, socials: object}) {
+export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string, ln: string, title: string, hl: boolean, scls: any, img: string, }) {
 
 	const firstn = fn ? fn.toUpperCase() : "UNDEFINED";
 	const lastn = ln ? ln.toUpperCase() : "UNDEFINED";

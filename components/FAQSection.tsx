@@ -39,13 +39,19 @@ function FAQEntry({entry}: {entry: FAQEntry}) {
 }
 
 export default function FAQSection() {
+	let entries: any[] = [];
+	for (let i = 0; i < faq.length; i++) {
+		entries.push(
+			<FAQEntry key={"q"+String(i)} entry={faq[i]} />
+		)
+	}
 	return (<>
 		<section id="faq" className="bg-slate-100 text-center">
 			<h1 className="text-3xl font-bold m-5">
 				Frequently asked Questions
 			</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-1 l-0 r-0 w-auto px-24 py-4">
-				{ faq.map(obj => (<FAQEntry entry={obj} />))}
+				{ entries }
 			</div>
 		</section>
 	</>);

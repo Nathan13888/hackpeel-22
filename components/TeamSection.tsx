@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TeamDisplay from "./TeamDisplay";
+import { socialsEntry } from "./SocialsDisplay"
 
 const styleTrapezoid: React.CSSProperties = {
 	"clipPath" : "polygon(21% 0, 79% 0, 100% 100%, 0 100%)"
@@ -23,11 +24,6 @@ const styleTrapezoid: React.CSSProperties = {
 
  }
 */
-interface socialsEntry {
-	img: string,
-	col: string,
-	href: string
-}
 
 interface staffEntry {
 	first: string,
@@ -141,7 +137,7 @@ export default function TeamSection() {
 			</div>
 			<div className="w-screen bg-gray-200">
 				<h1 className="text-4xl font-bold mx-0 py-4 w-auto"> Meet the team! </h1>
-				<h3 className="text-gray-500 italic">A lot of people's hard work went into this event. Check them out!</h3> 
+				<h3 className="text-gray-500 italic">A lot of people&apos;s hard work went into this event. Check them out!</h3> 
 				<div className={flexcls}>
 					<SectionDisp arr={staff} />
 				</div>

@@ -12,11 +12,11 @@ export default function AboutSection() {
 					<br/>
 					<p>
 						<b>hack::peel</b> is a hackathon curated specifically for the students of the Peel Region.
-						As a hacker, you'll learn, hone, and develop your skills in STEM in a 24-hour blitz of passion, skill, and creativity.
+						As a hacker, you&apos;ll learn, hone, and develop your skills in STEM in a 24-hour blitz of passion, skill, and creativity.
 						<br/>
 						With <b>no barrier to entry</b> and <b>no specific theme</b>, this hackathon is for all students! 
 						Regardless of your prior experience, this is your chance to build, learn, and 
-						show off the creations you've always dreamed of for a chance at the $20,000 prize pool!
+						show off the creations you&apos;ve always dreamed of for a chance at the $20,000 prize pool!
 					</p>
 					<br/>
 				</div>

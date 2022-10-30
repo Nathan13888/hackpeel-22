@@ -1,6 +1,5 @@
-import { useState } from "react";
 import SocialObject from "./SocialsDisplay";
-
+import Image from "next/image";
 
 export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string, ln: string, title: string, hl: boolean, scls: any, img: string, }) {
 
@@ -25,7 +24,9 @@ export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string,
 
 	return (<>
 		<div className={cns}>
-			<img className="w-48 h-48 rounded-md mb-2" src={img}/>
+			<div className="relative w-48 h-48 rounded-md mb-2">
+				<Image src={img} layout="fill" alt={fn + " " + ln}/>
+			</div>
 			<div className={fns} >{firstn}</div>
 			<div className={lns}>{lastn}</div>
 			<div className={ts} >{title}</div>

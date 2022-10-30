@@ -1,7 +1,9 @@
 import { useState } from "react";
 import TeamDisplay from "./TeamDisplay";
 
-const styleTrapezoid = {clipPath: "polygon(21% 0, 79% 0, 100% 100%, 0 100%)"};
+const styleTrapezoid: React.CSSProperties = {
+	"clipPath" : "polygon(21% 0, 79% 0, 100% 100%, 0 100%)"
+};
 
 // Structure:
 /*
@@ -21,7 +23,22 @@ const styleTrapezoid = {clipPath: "polygon(21% 0, 79% 0, 100% 100%, 0 100%)"};
 
  }
 */
-const staff = [
+interface socialsEntry {
+	img: string,
+	col: string,
+	href: string
+}
+
+interface staffEntry {
+	first: string,
+	last: string,
+	img?: string,
+	title: string,
+	highlight?: boolean,
+	socials?: socialsEntry[]
+}
+
+const staff: staffEntry[] = [
 	{
 		first: "Pranav",
 		last: "Tripathi",
@@ -111,21 +128,25 @@ const staff = [
 	}
 ]
 
-function SectionDisp({arr}: {arr: any[]}) {
-	return <>{arr.map(member => <TeamDisplay fn={member.first} ln={member.last} img={member.img ? member.img.src : null} title={member.title} hl={member.highlight} scls={member.socials} key={member.first} />)}</>;
+function SectionDisp({arr}: {arr: staffEntry[]}) {
+	return <>{arr.map(member => <TeamDisplay fn={member.first} ln={member.last} img={member.img ? member.img : null} title={member.title} hl={member.highlight} scls={member.socials} key={member.first} />)}</>;
 }
 
 export default function TeamSection() {
-	const flexcls = "flex flex-wrap mx-16 pt-10 gap-10 justify-around w-auto";
+	const flexcls: string = "flex flex-wrap mx-16 pt-10 gap-10 justify-around w-auto";
 	return (<>
 		<section id="team" className="text-center m-0 w-auto">
-			<h1 className="text-4xl font-bold m-5 w-auto"> Meet the teams! </h1>
-			<div className="w-1/2 p-2 text-xl font-bold m-auto bg-gray-100" style={styleTrapezoid}>‎</div>
-			<div className="w-screen bg-gray-100">
+			<div className="m-0 p-0 l-0 r-0 bg-slate-100">
+				<div className="w-1/2 p-2 text-xl font-bold m-auto bg-gray-200" style={styleTrapezoid}>‎</div>
+			</div>
+			<div className="w-screen bg-gray-200">
+				<h1 className="text-4xl font-bold mx-0 py-4 w-auto"> Meet the team! </h1>
+				<h3 className="text-gray-500 italic">A lot of people's hard work went into this event. Check them out!</h3> 
 				<div className={flexcls}>
 					<SectionDisp arr={staff} />
 				</div>
-				<div className="w-1/2 p-2 text-xl font-bold m-auto bg-white" style={styleTrapezoid}>‎</div>
+				<br/>
+				<div className="w-1/2 p-2  text-xl font-bold m-auto bg-white" style={styleTrapezoid}>‎</div>
 			</div>
 		</section>
 	</>)

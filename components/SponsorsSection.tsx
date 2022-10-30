@@ -1,13 +1,25 @@
+
 // Sponsor object
 // name: sponsor name (string) [used for alternate text]
-// img: logo (image object {})
+// img: logo path
 // col: hover color (string)
 // href: sponsor link (if available)
-const sponsors = [
+interface sponsorEntry {
+	name: string,
+	img: string,
+	col: string,
+	href: string
+}
+const sponsors: sponsorEntry[] = [
 ]
 
-function Sponsor({name, img, col, href}: {name: string, img: string, col: string, href: string}) {
-	const styling = {
+function Sponsor({entry}: {entry: sponsorEntry}) {
+	const name: string = entry.name;
+	const img: string = entry.img;
+	const col: string = entry.col;
+	const href: string = entry.href;
+
+	const styling: React.CSSProperties = {
 		"--sponsor-col": col
 	} as React.CSSProperties;
 	return (<>
@@ -20,13 +32,13 @@ function Sponsor({name, img, col, href}: {name: string, img: string, col: string
 export default function SponsorsSection() {
 	const flexcls = "flex flex-wrap mx-16 pt-10 justify-around w-auto";
 	return (<>
-		<section id="sponsor" className="text-center m-0 w-auto">
+		<section id="sponsor" className="text-center mb-8 w-auto">
 			<h1 className="text-4xl font-bold m-5 w-auto">Sponsors</h1>
 			<div className={flexcls}>
-				{sponsors.map(spnsr => (<Sponsor name={spnsr.name} img={spnsr.img ? spnsr.img.src : null} col={spnsr.col} href={spnsr.href} key={spnsr.name} />))}
+				{sponsors.map(spnsr => (<Sponsor entry={spnsr} />))}
 			</div>
-			<a className="m-auto l-0 r-0">
-				<button className="">Become a Sponsor</button>
+			<a className="m-auto l-0 r-0" href="">
+				<button className="sponsorbtn transition-all p-4 rounded-xl bg-slate-900 text-white text-lg">Become a Sponsor</button>
 			</a>
 		</section>
 	</>)

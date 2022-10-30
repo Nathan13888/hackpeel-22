@@ -1,0 +1,14 @@
+@keyframes faq-reveal {
+	from {
+		opacity: 0;
+		transform: translateX(-1em);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.answer {
+	animation: faq-reveal 0.5s ease-out 0s;
+}

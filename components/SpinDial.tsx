@@ -8,20 +8,18 @@ function strmap(str, cb) {
 }
 function RollingNumber({ num }: { num: number }) {
   return (
-    <>
-      <div
-        className="relative left-0 transition ease-in-out duration-500"
-        style={{ transform: `translateY(${-5 * num}em)` }}
-      >
-        {digits.map((num) => (
-          <>
-            <div className="h-20 w-16 flex justify-center items-center font-bold text-5xl">
-              {num}
-            </div>
-          </>
-        ))}
-      </div>
-    </>
+    <div
+      className="relative left-0 transition ease-in-out duration-500"
+      style={{ transform: `translateY(${-5 * num}em)` }}
+    >
+      {digits.map((num) => (
+        <>
+          <div key={num} className="h-20 w-16 flex justify-center items-center font-bold text-5xl">
+            {num}
+          </div>
+        </>
+      ))}
+    </div>
   );
 }
 export default function SpinDial({
@@ -33,17 +31,22 @@ export default function SpinDial({
   digits: number;
   descriptor: string;
 }) {
-  let strnum = String(num);
+  const strnum: string = String(num);
   const display: string = strnum.padStart(digits, "0");
 
+  let displays: any[] = [];
+
+  for (let i = 0; i < display.length; i++) {
+    displays.push(
+      <div key={descriptor+String(i)} className="float-left h-20 w-16 bg-gradient-to-b from-slate-200 via-transparent to-slate-200 place-content-center text-center overflow-hidden">
+        <RollingNumber num={Number(display[i])} />
+      </div>
+    )
+  }
   return (
     <div className="mx-2 flex flex-col">
       <div className="flex">
-        {strmap(display, (digit) => (
-          <div className="float-left h-20 w-16 bg-gradient-to-b from-slate-200 via-transparent to-slate-200 place-content-center text-center overflow-hidden">
-            <RollingNumber num={Number(digit)} />
-          </div>
-        ))}
+        {displays}
       </div>
       <p className="text-xl text-center">{descriptor}</p>
     </div>

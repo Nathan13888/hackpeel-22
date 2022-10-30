@@ -18,6 +18,7 @@ export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string,
 		ts += " text-white"
 
 	} else {
+		cns += " bg-slate-100"
 		fns += " text-sky-800"
 		lns += " text-slate-400"
 	}

@@ -1,3 +1,7 @@
 .sponsor:hover {
-	filter: brightness(120%) drop-shadow(var(--sponsor-col) 0 0 3px);
+	filter: brightness(140%) drop-shadow(var(--sponsor-col) 0 0 3px);
+}
+
+.sponsorbtn:hover {
+	background-color: rgb(92, 93, 93);
 }

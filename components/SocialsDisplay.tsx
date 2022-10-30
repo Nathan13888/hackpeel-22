@@ -20,7 +20,9 @@ function SocialObject({img, col, href, alt}: {img: string, col: string, href: st
 	return (
 		<a className={acls} href={href} style={astyle}>
 			<div className={imgcls}>
-				<Image src={img} layout="fill" alt={alt}/>
+			{
+					img ? <Image src={img} layout="fill" alt={alt}/> : null
+				}
 			</div>
 		</a>
 	)

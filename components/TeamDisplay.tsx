@@ -25,7 +25,9 @@ export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string,
 	return (<>
 		<div className={cns}>
 			<div className="relative w-48 h-48 rounded-md mb-2">
-				<Image src={img} layout="fill" alt={fn + " " + ln}/>
+				{
+					img ? <Image src={img} layout="fill" alt={fn + " " + ln}/> : null
+				}
 			</div>
 			<div className={fns} >{firstn}</div>
 			<div className={lns}>{lastn}</div>

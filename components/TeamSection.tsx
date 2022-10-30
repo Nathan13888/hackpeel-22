@@ -1,4 +1,3 @@
-import { useState } from "react";
 import TeamDisplay from "./TeamDisplay";
 import { socialsEntry } from "./SocialsDisplay"
 

@@ -25,7 +25,9 @@ function Sponsor({entry}: {entry: sponsorEntry}) {
 	return (<>
 		<a className="block w-72 h-40 m-5" href={href}>
 			<div className="transition-all block sponsor max-w-full max-h-full m-auto l-0 r-0 object-contain relative">
-				<Image src={img} alt={name} layout="fill"/>
+			{
+					img ? <Image src={img} layout="fill" alt={name}/> : null
+				}
 			</div>
 		</a>
 	</>)

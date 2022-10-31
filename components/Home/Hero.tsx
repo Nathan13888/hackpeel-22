@@ -54,13 +54,18 @@ export default function Hero() {
             <div className="absolute p-4 xs:p-8 sm:p-16 z-1 flex flex-col justify-center items-center h-screen w-full">
                 <div className="text-center">
                     <div className="mb-4">
-                        <motion.div variants={topLineVariants} initial="initial" animate="animate" className="font-medium text-white flex flex-wrap gap-2 text-2xl lg:text-4xl justify-center">
+                        <motion.div variants={topLineVariants} initial="initial" animate="animate" className="font-medium text-white flex gap-2 text-xl lg:text-4xl justify-center">
                             {topLine.map(char => <motion.span className="inline-block relative" variants={characterVariants} key={char}>{char}</motion.span>)}
                         </motion.div>
 
-                        <motion.div variants={bottomLineVariants} initial="initial" animate="animate" className="font-bold flex flex-wrap gap-2 text-6xl sm:text-7xl lg:text-9xl">
-                            {bottomLine.slice(0, 6).map(char => <motion.span className="inline-block relative bg-clip-text text-[#06f5c2] pb-5" variants={characterVariants} key={char}>{char}</motion.span>)}
-                            {bottomLine.slice(6).map(char => <motion.span className="inline-block relative bg-clip-text text-white pb-5" variants={characterVariants} key={char}>{char}</motion.span>)}
+                        <motion.div variants={bottomLineVariants} initial="initial" animate="animate" className="font-bold flex gap-2 text-5xl sm:text-7xl lg:text-9xl">
+                            <div className='flex'>
+                                {bottomLine.slice(0, 6).map(char => <motion.span className="inline-block relative bg-clip-text text-[#06f5c2]" variants={characterVariants} key={char}>{char}</motion.span>)}
+                            </div>
+
+                            <div className='flex'>
+                                {bottomLine.slice(6).map(char => <motion.span className="inline-block relative bg-clip-text text-white" variants={characterVariants} key={char}>{char}</motion.span>)}
+                            </div>
                         </motion.div>
                     </div>
                 </div>

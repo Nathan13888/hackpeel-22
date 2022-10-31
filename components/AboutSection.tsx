@@ -11,11 +11,11 @@ export default function About() {
             >
                 <h1 className="text-white font-bold text-3xl md:text-4xl">Enter STEM with a <span className='text-[#04f4c1]'>bang</span>.</h1>
                 <p className="mt-4 w-full md:w-3/4 text-lg text-gray-200">
-                    hack::peel is a hackathon curated specifically for students in the Peel Region. As a hacker, you&quot;ll learn, hone, and develop your skills in STEM in a 24 hour blitz of passion, skill, and creativity.
+                    hack::peel is a hackathon curated specifically for students in the Peel Region. As a hacker, you&#39;ll learn, hone, and develop your skills in STEM in a 24 hour blitz of passion, skill, and creativity.
                 </p>
 
                 <p className='mt-4 w-full md:w-3/4 text-lg text-gray-200'>
-                    With no barrier of entry and no specific theme, this hackathon is for all students! Regardless of your prior experience, this is your chance to build, learn, and show off the creations you&quot;ve always dreamed of, while competing for a chance at the $20,000 prize pool!
+                    With no barrier of entry and no specific theme, this hackathon is for all students! Regardless of your prior experience, this is your chance to build, learn, and show off the creations you&#39;ve always dreamed of, while competing for a chance at the $20,000 prize pool!
                 </p>
             </div>
 

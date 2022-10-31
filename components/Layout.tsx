@@ -15,9 +15,9 @@ const contentVariants = {
 }
 
 export default function Layout({ name, children, noAnim }: { name: string, children: any, noAnim?: boolean }) {
-    const title = `hack::peel`;
-    const description = "hack::peel description (CHANGE ME)";
-    const imageSrc = "???"
+    const title = `Hackathon | hack::peel`;
+    const description = "hack::peel is a hackathon curated specifically for students in the Peel Region, happening on December 16, 2022.";
+    const imageSrc = "https://i.imgur.com/zOxeFaR.png"
 
     return (
         <div className="flex flex-col min-h-screen overflow-hidden" key={name}>
@@ -30,8 +30,8 @@ export default function Layout({ name, children, noAnim }: { name: string, child
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content={imageSrc} />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="WIDTH" />
-                <meta property="og:image:height" content="HEIGHT" />
+                <meta property="og:image:width" content="400" />
+                <meta property="og:image:height" content="376" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:title" content={title} />

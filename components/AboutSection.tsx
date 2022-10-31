@@ -20,7 +20,7 @@ export default function About() {
             </div>
 
             <div 
-                className="flex p-0 m-0 w-1/2 md:w-1/4"
+                className="flex p-0 m-0 w-1/2 md:w-1/3"
             >
                 <div className='flex ring-8 ring-[#04f4c1] rounded-full'>
                     <Image className="rounded-full" src={Logo} alt="Logo" objectFit="cover" objectPosition="center" width={540} height={540} quality={100} placeholder="blur" />

@@ -20,8 +20,6 @@ export default function Home({ documentsRaw }) {
   // TODO: Refactor this once we add sponsors to CMS
   const team = documentsRaw;
 
-  console.log(team)
-
   return (
     <Layout name="Home">
       <Hero />

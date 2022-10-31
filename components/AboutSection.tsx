@@ -1,27 +1,31 @@
+import React from "react"
+import Image from 'next/image'
 
+import Logo from "../public/images/logo-small.png"
 
-export default function AboutSection() {
-	return (<>
-		<section id="about" className="text-center">
-			<div className="w-full flex flex-row h-auto py-4">
-				<div className="w-1/4 h-full"></div>
-				<div className="grid grid-cols-1 place-content-center grow h-full">
-					<span className="text-5xl font-bold">
-						Enter Tech With a <span className="text-[#06f5c2]">Bang</span>.
-					</span>
-					<br/>
-					<p>
-						<b>hack::peel</b> is a hackathon curated specifically for the students of the Peel Region.
-						As a hacker, you&apos;ll learn, hone, and develop your skills in STEM in a 24-hour blitz of passion, skill, and creativity.
-						<br/>
-						With <b>no barrier to entry</b> and <b>no specific theme</b>, this hackathon is for all students! 
-						Regardless of your prior experience, this is your chance to build, learn, and 
-						show off the creations you&apos;ve always dreamed of for a chance at the $20,000 prize pool!
-					</p>
-					<br/>
-				</div>
-				<div className="w-1/4 h-full"></div>
-			</div>
-		</section>
-	</>);
+export default function About() {
+    return (
+        <section className="flex p-10 flex-col items-center lg:flex-row lg:p-20 xl:px-40 items-left bg-[#0e084f] gap-6 z-[30]" id="about">
+            <div
+                className="flex flex-col items-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0"
+            >
+                <h1 className="text-white font-bold text-3xl md:text-4xl">Enter STEM with a <span className='text-[#04f4c1]'>bang</span>.</h1>
+                <p className="mt-4 w-full md:w-3/4 text-lg text-gray-200">
+                    hack::peel is a hackathon curated specifically for students in the Peel Region. As a hacker, you&quot;ll learn, hone, and develop your skills in STEM in a 24 hour blitz of passion, skill, and creativity.
+                </p>
+
+                <p className='mt-4 w-full md:w-3/4 text-lg text-gray-200'>
+                    With no barrier of entry and no specific theme, this hackathon is for all students! Regardless of your prior experience, this is your chance to build, learn, and show off the creations you&quot;ve always dreamed of, while competing for a chance at the $20,000 prize pool!
+                </p>
+            </div>
+
+            <div 
+                className="flex p-0 m-0 w-1/2 md:w-1/4"
+            >
+                <div className='flex ring-8 ring-[#04f4c1] rounded-full'>
+                    <Image className="rounded-full" src={Logo} alt="Logo" objectFit="cover" objectPosition="center" width={540} height={540} quality={100} placeholder="blur" />
+                </div>
+            </div>
+        </section>
+    )
 }

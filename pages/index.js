@@ -8,7 +8,7 @@ import SponsorsSection from "../components/SponsorsSection"
 import AboutSection from "../components/AboutSection"
 import FAQSection from "../components/FAQSection"
 import FAQ from "../components/Home/FAQ"
-
+import RegisterToday from "../components/Home/RegisterToday"
 export default function Home() {
   return (
     <Layout name="Home">
@@ -18,7 +18,7 @@ export default function Home() {
       <FAQ />
       <TeamSection />
       <SponsorsSection />
-      <DateCounter />
+      <RegisterToday />
     </Layout>
   )
 }

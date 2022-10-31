@@ -7,18 +7,18 @@ export interface FrequentlyAskedQuestion {
 };
 
 const faq: FrequentlyAskedQuestion[] = [
-	{
-		title: "How many columns are there for frequently asked questions?",
-		content: "Two, one on smaller screen widths. You can test this by resizing the window."
-	},
-	{
-		title: "What is a hackathon?",
-		content: "An event where participants, or \"Hackers\" work on and try to create products using technology. Usually hackathons require you to create these products to solve a particular problem or according to a specific theme; however, you can create whatever you want, however you want in this one. Anything could have a shot at winning; last year some of the winners included an AI Cataloguing tool, a vector art tool made in GameMaker Studio, and Tetris in VR! So go wild, young grasshoppers, and be free!"
-	},
-	{
-		title: "What happens if there are an odd number of Q/A pairs?",
-		content: "It gets cut off at the halfway mark for consistency with word wrapping, like this."
-	}
+    {
+        title: "How many columns are there for frequently asked questions?",
+        content: "Two, one on smaller screen widths. You can test this by resizing the window."
+    },
+    {
+        title: "What is a hackathon?",
+        content: "An event where participants, or \"Hackers\" work on and try to create products using technology. Usually hackathons require you to create these products to solve a particular problem or according to a specific theme; however, you can create whatever you want, however you want in this one. Anything could have a shot at winning; last year some of the winners included an AI Cataloguing tool, a vector art tool made in GameMaker Studio, and Tetris in VR! So go wild, young grasshoppers, and be free!"
+    },
+    {
+        title: "What happens if there are an odd number of Q/A pairs?",
+        content: "It gets cut off at the halfway mark for consistency with word wrapping, like this."
+    }
 ]
 
 export default function FAQ({ faq: faqRaw }) {
@@ -48,6 +48,7 @@ export default function FAQ({ faq: faqRaw }) {
                     )}
                 </div>
             </div>
+
         </section>
     )
 }

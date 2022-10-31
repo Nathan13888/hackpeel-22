@@ -36,7 +36,7 @@ function Sponsor({entry}: {entry: sponsorEntry}) {
 export default function SponsorsSection() {
 	const flexcls = "flex flex-wrap mx-16 pt-10 justify-around w-auto";
 	return (<>
-		<section id="sponsor" className="text-center mb-8 w-auto bg-[#013d30] p-10">
+		<section id="sponsor" className="text-center w-auto bg-[#013d30] p-10">
 			<h1 className="text-4xl text-white font-bold m-5 w-auto">Sponsors</h1>
 			<div className={flexcls}>
 				{sponsors.map(spnsr => (<Sponsor key={spnsr.name} entry={spnsr} />))}

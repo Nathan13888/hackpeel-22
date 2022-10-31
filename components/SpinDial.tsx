@@ -14,7 +14,7 @@ function RollingNumber({ num }: { num: number }) {
       style={{ transform: `translateY(${-5 * num}em)` }}
     >
       {digits.map((num) => (
-        <div key={Number(`${Math.floor(Math.random() * 1000)}${num}`)} className="h-20 w-16 flex justify-center items-center font-bold text-5xl">
+        <div key={Number(`${Math.floor(Math.random() * 1000)}${num}`)} className="h-20 w-16 flex justify-center items-center font-bold text-5xl text-white">
           {num}
         </div>
       ))}
@@ -37,7 +37,7 @@ export default function SpinDial({
 
   for (let i = 0; i < display.length; i++) {
     displays.push(
-      <div key={descriptor + String(i)} className="float-left h-20 w-16 bg-gradient-to-b from-slate-200 via-transparent to-slate-200 place-content-center text-center overflow-hidden">
+      <div key={descriptor + String(i)} className="float-left h-20 w-16 bg-white/30 place-content-center text-center overflow-hidden">
         <RollingNumber num={Number(display[i])} />
       </div>
     )
@@ -47,7 +47,7 @@ export default function SpinDial({
       <div className="flex">
         {displays}
       </div>
-      <p className="text-xl text-center">{descriptor}</p>
+      <p className="text-xl text-center text-gray-200">{descriptor}</p>
     </div>
   );
 }

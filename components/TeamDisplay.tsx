@@ -3,23 +3,22 @@ import Image from "next/image";
 
 export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string, ln: string, title: string, hl: boolean, scls: any, img: string, }) {
 
-	const firstn = fn ? fn.toUpperCase() : "UNDEFINED";
-	const lastn = ln ? ln.toUpperCase() : "UNDEFINED";
+	const firstn = fn ? fn.toUpperCase() : "";
+	const lastn = ln ? ln.toUpperCase() : "";
 	var cns = "p-5 overflow-hidden text-left rounded-md team-card transition-all";
 	var fns = "mx-2 my-0 py-0 font-bold text-xl";
 	var lns = "mx-2 mb-0 py-0 font-bold";
-	var ts = "ml-2 w-44 whitespace-normal h-20 transition-all overflow-hidden"
+	var ts = "ml-2 w-44 whitespace-normal h-20 transition-all overflow-hidden text-white"
 	if (scls) ts += " desc"
 	if (hl) {
 		cns += " bg-[#283678]";
 		fns += " text-white";
 		lns += " text-[#33ffc5]"
-		ts += " text-white"
 
 	} else {
-		cns += " bg-slate-100"
-		fns += " text-sky-800"
-		lns += " text-slate-400"
+		cns += " bg-slate-600"
+		fns += " text-sky-300"
+		lns += " text-slate-200"
 	}
 
 	return (<>

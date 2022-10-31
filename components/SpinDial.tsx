@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import useInterval from "../util/chooks.js";
 // import Logo from "../public/images/logo.png";
+import { v4 } from "uuid"
 
 const digits: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 function strmap(str, cb) {
@@ -13,11 +14,9 @@ function RollingNumber({ num }: { num: number }) {
       style={{ transform: `translateY(${-5 * num}em)` }}
     >
       {digits.map((num) => (
-        <>
-          <div key={num} className="h-20 w-16 flex justify-center items-center font-bold text-5xl">
-            {num}
-          </div>
-        </>
+        <div key={Number(`${Math.floor(Math.random() * 1000)}${num}`)} className="h-20 w-16 flex justify-center items-center font-bold text-5xl">
+          {num}
+        </div>
       ))}
     </div>
   );
@@ -38,7 +37,7 @@ export default function SpinDial({
 
   for (let i = 0; i < display.length; i++) {
     displays.push(
-      <div key={descriptor+String(i)} className="float-left h-20 w-16 bg-gradient-to-b from-slate-200 via-transparent to-slate-200 place-content-center text-center overflow-hidden">
+      <div key={descriptor + String(i)} className="float-left h-20 w-16 bg-gradient-to-b from-slate-200 via-transparent to-slate-200 place-content-center text-center overflow-hidden">
         <RollingNumber num={Number(display[i])} />
       </div>
     )

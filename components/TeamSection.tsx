@@ -151,7 +151,7 @@ export default function TeamSection() {
 				<br />
 				
 			</div>
-			<div className="w-1/2 p-2  text-xl font-bold m-auto bg-white" style={styleTrapezoid}>‎</div>
+			<div className="w-1/2 p-2  text-xl font-bold m-auto bg-white bg-[#013d30]" style={styleTrapezoid}>‎</div>
 		</section>
 	</>)
 }

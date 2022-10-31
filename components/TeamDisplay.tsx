@@ -1,7 +1,11 @@
 import SocialObject from "./SocialsDisplay";
 import Image from "next/image";
 
-export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string, ln: string, title: string, hl: boolean, scls: any, img: string, }) {
+import { useNextSanityImage } from "next-sanity-image";
+import { SanityReference } from "@sanity/image-url/lib/types/types";
+import client from "../lib/sanity";
+
+export default function TeamDisplay({ fn, ln, title, img, hl, scls }: { fn: string, ln: string, title: string, hl: boolean, scls: any, img: SanityReference, }) {
 
 	const firstn = fn ? fn.toUpperCase() : "";
 	const lastn = ln ? ln.toUpperCase() : "";
@@ -21,18 +25,30 @@ export default function TeamDisplay({fn, ln, title, img, hl, scls}: {fn: string,
 		lns += " text-slate-200"
 	}
 
+	// Prepare next.js image from sanity CMS
+	const imageProps = useNextSanityImage(
+		client,
+		img
+	);
+
 	return (<>
 		<div className={cns}>
 			<div className="relative w-48 h-48 rounded-md mb-2">
-				{
-					img ? <Image src={img} layout="fill" alt={fn + " " + ln}/> : null
-				}
+				<Image
+					{...imageProps}
+					width={500}
+					height={500}
+					objectFit="cover"
+					objectPosition="center"
+					className="duration-300 transition-all"
+					alt={fn + " " + ln}
+				/>
 			</div>
 			<div className={fns} >{firstn}</div>
 			<div className={lns}>{lastn}</div>
 			<div className={ts} >{title}</div>
 			{
-				scls ? <SocialObject socials={scls}/> : (<></>)
+				scls ? <SocialObject socials={scls} /> : (<></>)
 			}
 		</div>
 	</>)

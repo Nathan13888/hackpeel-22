@@ -139,7 +139,7 @@ export default function TeamSection({ team }) {
 							<TeamDisplay
 								fn={member.firstName}
 								ln={member.lastName}
-								img={member.img ? member.img : null}
+								img={member.image}
 								title={member.position}
 								hl={member.highlighted}
 								scls={member.socials}

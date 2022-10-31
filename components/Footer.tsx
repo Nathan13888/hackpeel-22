@@ -16,7 +16,7 @@ export default function Footer() {
         <div>
           <h2 className="text-4xl text-white">hack::peel</h2>
           <p className="text-lg text-blue-500">
-            EVENT TIME
+            December 16 - 17, 2022
           </p>
         </div>
 

@@ -18,9 +18,21 @@ export default {
             validation: (Rule) => Rule.required()
         },
         {
-            name: 'name',
-            title: 'Name',
+            name: 'firstName',
+            title: 'First Name',
             type: 'string',
+            validation: (Rule) => Rule.required()
+        },
+        {
+            name: 'lastName',
+            title: 'Last Name',
+            type: 'string',
+            validation: (Rule) => Rule.required()
+        },
+        {
+            name: 'highlighted',
+            title: 'Highlighted?',
+            type: 'boolean',
             validation: (Rule) => Rule.required()
         },
         {
@@ -64,7 +76,7 @@ export default {
     ],
     preview: {
         select: {
-            title: 'name',
+            title: 'firstName',
             subtitle: 'position',
             media: 'image',
         },

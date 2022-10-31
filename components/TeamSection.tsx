@@ -127,23 +127,23 @@ function SectionDisp({ arr }: { arr: staffEntry[] }) {
 	return <></>;
 }
 
-export default function TeamSection() {
+export default function TeamSection({ team }) {
 	const flexcls: string = "flex flex-wrap gap-8 justify-around w-full";
 	return (<>
 		<section id="team" className="text-center m-0 bg-[#0e084f]">
 			<div className="bg-[#0e084f] p-10 lg:p-16 lg:py-10">
 				<h1 className="text-4xl lg:text-5xl font-bold mb-6 w-auto text-white"> Meet the Team </h1>
 				<div className={flexcls}>
-					{staff.map(
+					{team.map(
 						member => (
 							<TeamDisplay
-								fn={member.first}
-								ln={member.last}
+								fn={member.firstName}
+								ln={member.lastName}
 								img={member.img ? member.img : null}
-								title={member.title}
-								hl={member.highlight}
+								title={member.position}
+								hl={member.highlighted}
 								scls={member.socials}
-								key={member.first}
+								key={member.firstName}
 							/>
 						)
 					)}

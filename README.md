@@ -19,7 +19,7 @@ Tailwind CSS
 
 Sanity CMS
 
-Vercel
+GitHub Pages
 
 ## Copyright
 Made by Ike Yang and Aritro Saha, 2022.

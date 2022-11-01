@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.hackpeel.ca">
-    <img alt="hack::peel" src="https://hackpeel.ca//_next/static/media/logo-small.ae9c7792.png" width="200" />
+    <img alt="hack::peel" src="https://hackpeel.ca//_next/static/media/logo-small.ae9c7792.png" width="100" />
   </a>
 </p>
 <h1 align="center">

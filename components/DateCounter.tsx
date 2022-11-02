@@ -14,9 +14,9 @@ export default function DateCounter() {
     const seconds = Math.floor(remaining / 1000) % 60
 
     return (
-        <div className="p-4">
-            <h1 className="text-xl text-white font-bold l-0 r-0 w-auto m-0 text-center">Hacking starts in...</h1>
-            <div className="flex justify-center p-4 mx-10">
+        <div className="p-4 text-center">
+            <span className="text-xl text-white font-bold">Starting in...</span>
+            <div className="flex justify-center p-2 mx-10">
 
                 <SpinDial num={days} digits={2} descriptor="Days" />
                 <SpinDial num={hours} digits={2} descriptor="Hours" />

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
 import Banner from "../../public/images/banner.jpg"
+import DateCounter from "../DateCounter";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -70,17 +71,20 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-2 text-white mb-12 md:w-3/4 lg:w-1/2">
+                <div className="flex flex-col gap-2 text-white mb- md:w-3/4 lg:w-1/2">
                     <p className="text-2xl font-light text-center">
                         Join us at The Woodlands Secondary School on December 16, 2022!
                     </p>
                 </div>
+                
+                <DateCounter />
 
                 <Link href="/sign-up">
                     <a className="py-4 px-6 bg-blue-500 rounded-lg font-semibold text-white hover:bg-blue-700 duration-150 text-lg lg:text-2xl mt-4">
                         Sign Up Today!
                     </a>
                 </Link>
+                
             </div>
         </div>
     )

@@ -73,7 +73,7 @@ export default function Hero() {
 
                 <div className="flex flex-col gap-2 text-white mb- md:w-3/4 lg:w-1/2">
                     <p className="text-2xl font-light text-center">
-                        Join us at The Woodlands Secondary School on December 16, 2022!
+                        Join us at The Woodlands Secondary School from <b>December 16 to 17, 2022</b>!
                     </p>
                 </div>
                 

@@ -7,7 +7,7 @@ const evtStart: number = Date.parse("2022-12-16T18:00:00.0000");
 
 export default function DateCounter() {
     const [remaining, setRemaining] = useState(0);
-    useInterval(() => setRemaining(Math.max(evtStart - Date.now(), 0)), 200);
+    useInterval(() => setRemaining(Math.max(evtStart - Date.now(), 0)), 100);
     const days = Math.floor(remaining / 86400000)
     const hours = Math.floor(remaining / 3600000) % 24
     const minutes = Math.floor(remaining / 60000) % 60

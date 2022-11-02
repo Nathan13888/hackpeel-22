@@ -4,7 +4,6 @@ import TeamSection from "../components/TeamSection"
 import SponsorsSection from "../components/SponsorsSection"
 import AboutSection from "../components/AboutSection"
 import FAQ from "../components/Home/FAQ"
-import RegisterToday from "../components/Home/RegisterToday"
 
 import { getDocumentsProps } from "../lib/sanity/util"
 
@@ -24,7 +23,6 @@ export default function Home({ documentsRaw }) {
       <FAQ />
       <TeamSection team={team} />
       <SponsorsSection />
-      <RegisterToday />
     </Layout>
   )
 }

@@ -66,6 +66,12 @@ const staff: staffEntry[] = [
 		highlight: true
 	},
 	{
+		first: "Nathan",
+		last: "Chung",
+		title: "Tech Lead",
+		highlight: true
+	},
+	{
 		first: "Ike",
 		last: "Yang",
 		title: "Frontend Developer and Designer",

@@ -1,24 +1,53 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import Accordion from "../Accordion"
 
+const linkstyle: CSSProperties = {
+    color: "turquoise",
+    fontWeight: "bold"
+} as CSSProperties;
 export interface FrequentlyAskedQuestion {
     title: string,
-    content: string
+    content: any
 };
 
 const faq: FrequentlyAskedQuestion[] = [
     {
-        title: "How many columns are there for frequently asked questions?",
-        content: "Two, one on smaller screen widths. You can test this by resizing the window."
+        title: "What's a hackathon?",
+        content: "Hackathons are 'development marathons', where people collaborate intensively over a short period of time to create a working project."
     },
     {
-        title: "What is a hackathon?",
-        content: "An event where participants, or \"Hackers\" work on and try to create products using technology. Usually hackathons require you to create these products to solve a particular problem or according to a specific theme; however, you can create whatever you want, however you want in this one. Anything could have a shot at winning; last year some of the winners included an AI Cataloguing tool, a vector art tool made in GameMaker Studio, and Tetris in VR! So go wild, young grasshoppers, and be free!"
+        title: "Are there any requirements to attend?",
+        content: "Nope! Anyone can join this hackathon."
     },
     {
-        title: "What happens if there are an odd number of Q/A pairs?",
-        content: "It gets cut off at the halfway mark for consistency with word wrapping, like this."
+        title: "When is the hackathon?",
+        content: (<>The hackathon is planned to run from Dec 16 - Dec 17. Check the <a href="#timetable" style={linkstyle}>timetable</a> for more information.</>)
+    },
+    {
+        title: "Is the hackathon running overnight?",
+        content: (<>No, participants will go home after Day 1 and come back to the venue on Day 2. Check the <a href="#timetable" style={linkstyle}>timetable</a> for more information.</>)
+    },
+    {
+        title: "Who can attend?",
+        content: "Any student enrolled in a Peel region high-school can attend this hackathon.",
+    },
+    {
+        title: "Are there any prizes for winners?",
+        content: "With the help of our sponsors, we will be providing monetary as well as software and API prizes to the chosen winners."
+    },
+    {
+        title: "Who owns my project?",
+        content: (<>You and your team own anything you create. Why not make it open source, on <a href="https://github.com/" style={linkstyle}>Github</a>?</>)
+    },
+    {
+        title: "Can I start work before the hackathon begins?",
+        content: "While you can explore ideas, you are not allowed to write code or begin working on the project before the hacking period of the hackathon starts."
+    },
+    {
+        title: "Is there a theme for the hackathon?",
+        content: (<>To allow for as much creative liberty, there is no required project theme. However, specific theme restrictions apply for sponsor prize eligibility. Check the <a href="" style={linkstyle}>Devpost</a> for more info.</>)
     }
+
 ]
 
 export default function FAQ({ faq: faqRaw }) {

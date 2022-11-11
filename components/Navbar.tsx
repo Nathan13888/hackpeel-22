@@ -10,7 +10,7 @@ import { GoThreeBars } from "react-icons/go"
 const links = [
     {
         name: "Home",
-        link: "/#home",
+        link: "/#hero",
         id: "home",
         priority: false
     },
@@ -58,7 +58,7 @@ export default function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
 
     return (
-        <header className="bg-slate-900 py-2 lg:py-4 sticky" id="home" style={{backgroundColor: "#101a38"}}>
+        <header className="bg-slate-900 py-2 lg:py-4 sticky bg-[#101a38] z-[9999] top-0" id="home">
             <div className="container px-4 mx-auto lg:flex lg:items-center">
                 <div className="flex justify-between items-center">
                     <Link href="/">

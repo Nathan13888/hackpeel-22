@@ -20,7 +20,7 @@ export default function Layout({ name, children, noAnim }: { name: string, child
     const imageSrc = "https://i.imgur.com/zOxeFaR.png"
 
     return (
-        <div className="flex flex-col min-h-screen overflow-hidden" key={name}>
+        <div className="flex flex-col min-h-screen" key={name}>
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />

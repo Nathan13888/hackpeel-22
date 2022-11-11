@@ -38,7 +38,7 @@ const bottomLine = "hack::peel".split('');
 
 export default function Hero() {
     return (
-        <div className="flex flex-col h-screen relative">
+        <div className="flex flex-col h-screen relative" id="hero">
             <div className='overflow-hidden' style={{ boxShadow: "inset 0 0 200px #000000" }}>
                 <Image
                     src={Banner}
@@ -78,13 +78,9 @@ export default function Hero() {
                 </div>
                 
                 <DateCounter />
-
-                <Link href="/sign-up">
-                    <a className="py-4 px-6 bg-blue-500 rounded-lg font-semibold text-white hover:bg-blue-700 duration-150 text-lg lg:text-2xl mt-4">
-                        Sign Up Today!
-                    </a>
-                </Link>
-                
+                <a className="py-4 px-6 bg-blue-500 rounded-lg font-semibold text-white hover:bg-blue-700 duration-150 text-lg lg:text-2xl mt-4" href="https://forms.gle/mYpGJs3eAVCDkVrv8" rel="noreferrer" target="_blank">
+                    Sign Up Today!
+                </a>
             </div>
         </div>
     )

@@ -17,9 +17,9 @@ export default function Home({ documentsRaw }) {
 
   return (
     <Layout name="Home">
+
       <Hero />
       <AboutSection />
-      {/* <FAQSection /> */}
       <FAQ />
       <TeamSection team={team} />
       <SponsorsSection />

@@ -78,7 +78,7 @@ export default function Timeline() {
                     <div className="absolute bottom-0 l-0 h-8 bg-black" style={{width: "450vw", left: "50vw"}}>Event Time</div> 
                     <div className="absolute bottom-0 l-0 h-8 bg-gray-400" style={{width: "50vw"}}></div>
                     <div className="absolute bottom-0 l-0 h-8 bg-gray-400" style={{width: "50vw"}}></div>
-                    { events.map(evt => <TimelineEventBar event={evt} highlight={eventObj.indexOf(evt) >= 0}/>)}
+                    { events.map(evt => <TimelineEventBar key={evt.title} event={evt} highlight={eventObj.indexOf(evt) >= 0}/>)}
                 </div>
                 <div className="absolute top-0 l-1/2 h-8 w-1 bg-black" style={{left: "50vw"}}></div>
             </div>

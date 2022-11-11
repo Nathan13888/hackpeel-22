@@ -5,7 +5,11 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: './'
+  experimental: {
+    images: {
+      allowFutureImage: true
+    }
+  }
 }
 
 module.exports = nextConfig

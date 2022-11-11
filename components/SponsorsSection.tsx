@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/future/image"
 
 
 
@@ -16,50 +16,50 @@ interface sponsorEntry {
 const sponsors: sponsorEntry[] = [
 	{
 		name: "CGI",
-		img: "../sponsor_logos/CGI.png",
-		col: "#e35c22",
+		img: "/sponsor_logos/CGI.png",
+		col: "red",
 		href: "https://cgi.com/"
 	},
 	{
 		name: "Wolfram",
-		img: "../sponsor_logos/Wolfram.png",
+		img: "/sponsor_logos/Wolfram.png",
 		col: "#e35c22",
 		href: "https://www.wolfram.com/"
 	},
 	{
 		name: "Desmos",
-		img: "../sponsor_logos/Desmos.png",
-		col: "#e35c22",
+		img: "/sponsor_logos/Desmos.png",
+		col: "lime",
 		href: "https://www.desmos.com/"
 	},
 	{
 		name: "taskade",
-		img: "../sponsor_logos/taskade.png",
-		col: "#e35c22",
+		img: "/sponsor_logos/taskade.png",
+		col: "white",
 		href: "https://www.taskade.com/"
 	},
 	{
 		name: "axure",
-		img: "../sponsor_logos/axure.png",
-		col: "#e35c22",
+		img: "/sponsor_logos/axure.png",
+		col: "lightgray",
 		href: "https://www.axure.com/"
 	},
 	{
 		name: "sashido",
-		img: "../sponsor_logos/sashido.png",
-		col: "#e35c22",
+		img: "/sponsor_logos/sashido.png",
+		col: "cyan",
 		href: "https://www.sashido.io/"
 	},
 	{
 		name: "InterviewCake",
-		img: "../sponsor_logos/InterviewCake.png",
-		col: "#e35c22",
+		img: "/sponsor_logos/InterviewCake.png",
+		col: "cyan",
 		href: "https://www.interviewcake.com/"
 	},
 	{
 		name: "echo3d",
-		img: "../sponsor_logos/echo3d.png",
-		col: "#e35c22",
+		img: "/sponsor_logos/echo3d.png",
+		col: "lightblue",
 		href: "https://www.echo3d.com/"
 	},
 
@@ -75,10 +75,10 @@ function Sponsor({entry}: {entry: sponsorEntry}) {
 		"--sponsor-col": col
 	} as React.CSSProperties;
 	return (<>
-		<a className="block w-72 h-40 m-5" href={href} rel="noreferrer" target="_blank">
-			<div className="transition-all block sponsor max-w-full max-h-full m-auto l-0 r-0 object-contain relative">
+		<a className="block w-72 h-36 m-5" href={href} rel="noreferrer" target="_blank">
+			<div className="block w-full h-full m-auto p-4 l-0 r-0 object-contain relative" style={styling}>
 			{
-				img ? <Image src={img} layout="fill" alt={name}/> : null
+				img ? <Image src={img} fill={true} alt={name} className="sponsor transition-all" style={{overflowX: "visible", objectFit: "contain"}}/> : null
 			}
 			</div>
 		</a>

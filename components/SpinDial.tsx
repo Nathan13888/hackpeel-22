@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useInterval from "../util/chooks.js";
+import { useInterval } from "../util/chooks.js";
 // import Logo from "../public/images/logo.png";
 import { v4 } from "uuid"
 

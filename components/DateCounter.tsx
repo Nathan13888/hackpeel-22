@@ -1,10 +1,10 @@
 import { useState } from "react";
-import useInterval from "../util/chooks.js";
+import { useInterval } from "../util/chooks.js";
 import SpinDial from "./SpinDial"
 // import Logo from "../public/images/logo.png";
 
 const evtStart: number = Date.parse("2022-12-16T18:00:00.0000");
-
+const evtEnd: number = Date.parse("2022-12-17T18:00:00.0000");
 export default function DateCounter() {
     const [remaining, setRemaining] = useState(0);
     useInterval(() => setRemaining(Math.max(evtStart - Date.now(), 0)), 100);

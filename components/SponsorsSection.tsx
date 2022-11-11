@@ -23,11 +23,11 @@ function Sponsor({entry}: {entry: sponsorEntry}) {
 		"--sponsor-col": col
 	} as React.CSSProperties;
 	return (<>
-		<a className="block w-72 h-40 m-5" href={href}>
+		<a className="block w-72 h-40 m-5" href={href} rel="noreferrer" target="_blank">
 			<div className="transition-all block sponsor max-w-full max-h-full m-auto l-0 r-0 object-contain relative">
 			{
-					img ? <Image src={img} layout="fill" alt={name}/> : null
-				}
+				img ? <Image src={img} layout="fill" alt={name}/> : null
+			}
 			</div>
 		</a>
 	</>)
@@ -41,7 +41,7 @@ export default function SponsorsSection() {
 			<div className={flexcls}>
 				{sponsors.map(spnsr => (<Sponsor key={spnsr.name} entry={spnsr} />))}
 			</div>
-			<a className="m-auto l-0 r-0" href="">
+			<a className="m-auto l-0 r-0" href="https://drive.google.com/file/d/1RvDQk77PdCdWyHUpfbeFaa-XQZLOdkUG/view?usp=share_link" rel="noreferrer" target="_blank">
 				<button className="sponsorbtn transition-all p-4 rounded-xl bg-slate-900 text-white text-lg">Become a Sponsor</button>
 			</a>
 		</section>

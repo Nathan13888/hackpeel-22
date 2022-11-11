@@ -48,7 +48,7 @@ const links = [
     },
     {
         name: "Sign Up",
-        link: "/sign-up",
+        link: "https://forms.gle/vJp1A13MDJNEevr1A",
         id: "call-to-action",
         priority: true
     },
@@ -85,8 +85,8 @@ export default function Header() {
                         links.map(({ name, link, priority, id }) =>
                             <Link key={name} href={link} scroll={!(link.includes("#"))}>
                                 <a 
-                                    className={`${priority ? "text-blue-600 hover:bg-blue-600 hover:text-white text-center border border-solid border-blue-600 mt-1 lg:mt-0 lg:ml-1" : "text-gray-300 hover:bg-gray-200 hover:text-gray-700"} p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors `}
-                                    data-test-id={`navbar-${id}`}
+                                    className={`${priority ? "text-blue-600 hover:bg-blue-600 hover:text-white text-center border border-solid border-blue-600 mt-1 lg:mt-0 lg:ml-1 hover:cursor-pointer" : "text-gray-300 hover:bg-gray-200 hover:text-gray-700"} p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors hover:cursor-pointer`}
+                                    data-test-id={`navbar-${id}`} rel={priority ? "noreferrer" : null} target={priority ? "_blank" : null}
                                 >
                                     {name}
                                 </a>

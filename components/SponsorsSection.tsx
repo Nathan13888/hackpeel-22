@@ -16,19 +16,19 @@ interface sponsorEntry {
 const sponsors: sponsorEntry[] = [
 	{
 		name: "CGI",
-		img: "/sponsor_logos/CGI.png",
+		img: "/sponsor_logos/cgi.png",
 		col: "red",
 		href: "https://cgi.com/"
 	},
 	{
 		name: "Wolfram",
-		img: "/sponsor_logos/Wolfram.png",
+		img: "/sponsor_logos/wolfram.png",
 		col: "#e35c22",
 		href: "https://www.wolfram.com/"
 	},
 	{
 		name: "Desmos",
-		img: "/sponsor_logos/Desmos.png",
+		img: "/sponsor_logos/desmos.png",
 		col: "lime",
 		href: "https://www.desmos.com/"
 	},
@@ -52,7 +52,7 @@ const sponsors: sponsorEntry[] = [
 	},
 	{
 		name: "InterviewCake",
-		img: "/sponsor_logos/InterviewCake.png",
+		img: "/sponsor_logos/interviewcake.png",
 		col: "cyan",
 		href: "https://www.interviewcake.com/"
 	},

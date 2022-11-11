@@ -5,7 +5,7 @@ import Logo from "../public/images/logo-small.png"
 
 export default function About() {
     return (
-        <section className="flex flex-col items-center lg:flex-row p-10 lg:p-20 xl:px-40 items-left bg-[#0e084f] gap-6 z-[30]" id="about">
+        <section className="flex flex-col items-center lg:flex-row p-10 lg:p-20 xl:px-40 items-left gap-6 z-[30]" id="about" style={{backgroundColor: "#1B1464"}}>
             <div
                 className="flex flex-col items-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0"
             >
